@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Dev-Converter</title>
+</head>
+
+<body>
+    <img class="logo" src="./assets/Logo.gif" alt="converter-logo">
+    <main>
+        <section class="top-container">
+            <label id="top-label">Converter <b>de</b></label>
+            <select class="currency-to-convert">
+                <option value="Real">R$ Real</option>
+                <option value="BTC">BTC - Bitcoin</option>
+                <option value="Dolar">US$ Dólar Americano</option>
+                <option value="Euro">€ Euro</option>
+                <option value="Libra">£ Libra</option>
+            </select>
+            <label id="mid-label">Converter <b>para</b></label>
+            <select class="currency-to-be-converted">
+                <option value="Dolar">US$ Dólar Americano</option>
+                <option value="BTC">BTC - Bitcoin</option>
+                <option value="Euro">€ Euro</option>
+                <option value="Libra">£ Libra</option>
+                <option value="Real">R$ Real</option>
+            </select>
+            <label id="under-label">Valor</label>
+            <input class="input-value" placeholder="Digite aqui">
+            <button class="button-to-convert">Converter</button>
+        </section>
+        <section class="lower-container">
+            <img class="coin-to-convert" src="./assets/moeda-real.png" alt="coin-to-convert">
+            <p id="value-name" class="currency-text">Real</p>
+            <p id="currency-value" class="value-text">R$ 0,00</p>
+            <img class="arrow" src="./assets/arrow.png" alt="arrow">
+            <img class="coin-to-be-converted" src="./assets/moeda-dolar.png" alt="coin-to-be-converted">
+            <p id="value-name-converted" class="currency-text">Dólar Americano</p>
+            <p id="currency-value-to-converted" class="value-text">US$ 0,00</p>
+        </section>
+    </main>
+    <footer>Feito com ♥ por Júnior Teodoro</footer>
+</body>
+<script src="./scripts.js"></script>
+
+</html>
