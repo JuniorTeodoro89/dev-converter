@@ -76,12 +76,81 @@ function returnValue() {
 function convertValues() {
     const inputCurrencyValue = Number(document.querySelector(".imput-value").value)
     const currencyValueToConvert = document.getElementById("currency-value")
-    const currencyValueConverted = document.getElementById("currency-value-converted")
+    const currencyValueConverted = document.getElementById("currency-value-to-converted")
+    const currencySelectFrom = document.querySelector(".currency-to-convert").value
+    const currencySelectTo = document.querySelector("currency-to-be-converted").value
+
+    const dolarToday = 5.44
+    const bitcoinToday = 645235.13
+    const euroToday = 6.32
+    const libraToday = 7.31
+
+    let valorEmReais
+    let valorConvertido
+
+    // Entrada em Real
+
+    if (currencySelectFrom == "Real") {
+        valorEmReais = inputCurrencyValue;
+    } 
+
+    if (currencySelectFrom == "Dolar") {
+        valorEmReais = inputCurrencyValue * dolarToday;
+    }
+
+    if (currencySelectFrom == "BTC") {
+        valorEmReais = inputCurrencyValue * bitcoinToday;
+    }
+
+    if (currencySelectFrom == "Euro") {
+        valorEmReais = inputCurrencyValue * euroToday;
+    }
+
+    if (currencySelectFrom == "Libra") {
+        valorEmReais = inputCurrencyValue * libraToday;
+    }
+
+    // Real > Saída
+
+    if (currencySelectTo == "Real") {
+        valorConvertido = valorEmReais;
+    }
+
+    if (currencySelectTo == "Dolar") {
+        valorConvertido = valorEmReais / dolarToday;
+    }
+
+    if (currencySelectTo == "BTC") {
+        valorConvertido = valorEmReais / bitcoinToday;
+    }
+
+    if (currencySelectTo == "Euro") {
+        valorConvertido = valorEmReais / euroToday;
+    }
+
+    if (currencySelectTo == "Libra") {
+        valorConvertido = valorEmReais / libraToday;
+    }
+
+    // Exibir valores formatados
+
+    currencyValueToConvert.innerHTML = valorEmReais.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BLR"
+    })
+    currencyValueConverted.innerHTML = valorConvertido.toLocaleString("pt-BR", {
+        style: "currency",
+        currency:
+            currencySelectTo == "Dolar" ? "USD" :
+            currencySelectTo == "Euro" ? "EUD":
+            currencySelectTo == "Libra" ? "GBD" :
+            currencySelectTo == "BTC" ? "BTC" : "BRL"
+    })
 
     convertValues()
 }
 
-currencySelect.addEventListener("change", changeCurrency)
+currencySelect.addEventListener("change", selectValues)
 currencyToConvert.addEventListener("change", selectValues)
 convertButton.addEventListener("click", () => {
     returnValue();
