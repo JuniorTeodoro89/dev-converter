@@ -43,9 +43,9 @@ function convertValues() {
 
     // Cotações fictícias
     const dolarToday = 5.40
-    const euroToday = 6.00
-    const libraToday = 7.00
-    const bitcoinToday = 500000
+    const euroToday = 6.32
+    const libraToday = 7.32
+    const bitcoinToday = 634450.20
 
     let valorEmReais
 
