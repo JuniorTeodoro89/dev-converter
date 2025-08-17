@@ -62,7 +62,7 @@ function convertValues() {
     if (currencySelectFrom == "Libra") {
         valorEmReais = inputCurrencyValue * libraToday
     }
-    if (currencySelectFrom == "Bitcoin") {
+    if (currencySelectFrom == "BTC") {
         valorEmReais = inputCurrencyValue * bitcoinToday
     }
 
@@ -80,7 +80,7 @@ function convertValues() {
     if (currencySelectTo == "Libra") {
         valorConvertido = valorEmReais / libraToday
     }
-    if (currencySelectTo == "Bitcoin") {
+    if (currencySelectTo == "BTC") {
         valorConvertido = valorEmReais / bitcoinToday
     }
 
