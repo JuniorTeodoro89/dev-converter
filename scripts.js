@@ -160,14 +160,12 @@ function changeCurrency() {
 
 currencySelect.addEventListener("change", changeCurrency)
 currencyToConvert.addEventListener("change", selectValues)
-convertButton.addEventListener("click", convertValues())
 inputValue.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
         event.preventDefault();
         convertButton.click();
     }
 })
-
 document.querySelector(".currency-to-convert").addEventListener("change", convertValues)
 document.querySelector(".currency-to-be-converted").addEventListener("change", convertValues)
-document.querySelector(".button-to-convert").addEventListener("click", convertValues)
+convertButton.addEventListener("click", convertValues)
